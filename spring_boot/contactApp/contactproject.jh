@@ -1,0 +1,20 @@
+entity Contact {
+	contactId Integer required,
+	name String required,
+	email String required,
+	phoneNumber String required
+}
+
+entity Project{
+	name String,
+	duration String,
+	status Boolean
+}
+
+relationship ManyToMany {
+	Contact{ContactProjects} to Project{Contact(contactId)}
+}
+
+paginate Address with pagination
+dto * with mapstruct
+service all with serviceImpl

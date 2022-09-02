@@ -1,0 +1,50 @@
+{
+  "applications": "*",
+  "changelogDate": "20220728032154",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "contact",
+  "fields": [
+    {
+      "fieldName": "contactId",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Contact",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "contact",
+      "relationshipName": "contactAddress",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "contact",
+      "ownerSide": true,
+      "relationshipName": "contactProjects",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

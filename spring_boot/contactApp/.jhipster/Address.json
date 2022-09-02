@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20220728032155",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "address",
+  "fields": [
+    {
+      "fieldName": "houseDetails",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "post",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pin",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Address",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "contactId",
+      "otherEntityName": "contact",
+      "otherEntityRelationshipName": "contactAddress",
+      "relationshipName": "contact",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
